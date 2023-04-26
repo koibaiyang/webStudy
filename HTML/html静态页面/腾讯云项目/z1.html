@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      /* 设置nav区域 */
+      .nav {
+        height: 40px;
+        background-color: #2b303b;
+        line-height: 40px;
+      }
+      .nav ul {
+        list-style: none;
+        /* width: 1275px; */
+        height: 40px;
+        margin: 0 auto;
+      }
+      .nav ul li {
+        float: left;
+      }
+      .nav ul li img {
+        margin-right: 460px;
+        margin-left: 240px;
+      }
+      .nav ul li a {
+        padding: 0 10px;
+        border-right: 1px solid #fff;
+        height: 40px;
+        /* line-height: 40px; */
+        text-decoration: none;
+        color: #fff;
+      }
+      .nav ul li:last-child a {
+        border: none;
+      }
+      /* 设置banner区域 */
+      .banner {
+        height: 480px;
+        background-color: #181c28;
+      }
+      .banner img {
+        float: right;
+        margin-right: 230px;
+      }
+      .banner div {
+        margin-left: 240px;
+        padding: 40px 0 0 20px;
+        width: 251px;
+        height: 480px;
+        background-color: #1b2a3f;
+        box-sizing: border-box;
+      }
+      .banner ul {
+        list-style: none;
+      }
+      .banner ul li {
+        height: 40px;
+      }
+      .banner ul li a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        height: 40px;
+        line-height: 40px;
+      }
+      /* 设置content区域 */
+      .main {
+        margin: 0 auto;
+        height: 740px;
+        width: 1500px;
+        background-color: #fff;
+      }
+      .main .top {
+        height: 140px;
+        text-align: center;
+        /* clear: both; */
+      }
+      .main .top h2 {
+        margin-top: 45px;
+      }
+      .main .top p {
+        margin-top: 25px;
+      }
+      .main .content {
+        margin: 0 auto;
+        padding: 40px 50px 0;
+        width: 1200px;
+        height: 462px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 5px 5px;
+      }
+      .main .content .left {
+        float: left;
+        width: 442px;
+      }
+      .main .content .left h2 {
+        display: block;
+        padding-bottom: 6px;
+        width: 105px;
+        border-bottom: 1px solid #ccc;
+        font-size: 26px;
+        font-weight: 400;
+      }
+      .main .content .left p {
+        margin-top: 20px;
+        color: #666;
+      }
+      .main .content .left a {
+        display: block;
+        box-sizing: border-box;
+        margin-top: 30px;
+        width: 164px;
+        height: 50px;
+        border: 2px solid #ffa500;
+        line-height: 50px;
+        text-align: center;
+        text-decoration: none;
+        color: #000;
+      }
+
+      .main .content .right {
+        float: right;
+      }
+      .main .content .right img {
+        width: 580px;
+      }
+      /* 设置footer区域 */
+      .footer {
+        height: 400px;
+        background-color: #2e3033;
+      }
+      .footer .left {
+        margin-left: 240px;
+      }
+      .footer .left div {
+        margin-top: 34px;
+        float: left;
+        margin-right: 75px;
+      }
+      .footer .left ul {
+        list-style: none;
+      }
+      .footer .left ul li a {
+        display: block;
+        width: 150px;
+        height: 25px;
+        text-decoration: none;
+        color: #ccc;
+        font-size: 14px;
+      }
+      .footer .left ul li:first-child a {
+        color: #eee;
+        margin-bottom: 10px;
+      }
+      .footer .right {
+        float: right;
+        width: 200px;
+        height: 146px;
+        margin-top: 35px;
+        margin-right: 240px;
+      }
+      .footer .right p {
+        color: #ccc;
+        font-size: 12px;
+      }
+      .footer .right a {
+        display: block;
+        margin-top: 24px;
+        width: 190px;
+        height: 35px;
+        background-color: #00a4ff;
+        text-decoration: none;
+        color: #fff;
+        line-height: 35px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li><img src="./images/logo.png" alt="" /></li>
+        <li><a href="#">最新活动</a></li>
+        <li><a href="#">产品</a></li>
+        <li><a href="#">解决方案</a></li>
+        <li><a href="#">定价</a></li>
+        <li><a href="#">文档</a></li>
+        <li><a href="#">企业中心</a></li>
+        <li><a href="#">云市场</a></li>
+        <li><a href="#">开发者支持</a></li>
+        <li><a href="#">合作与生态</a></li>
+        <li><a href="#">客户</a></li>
+      </ul>
+    </div>
+    <div class="banner">
+      <img src="./images/banner.png" alt="" />
+      <div>
+        <ul>
+          <li><a href="#">云服务器</a></li>
+          <li><a href="#">轻量应用服务器</a></li>
+          <li><a href="#">域名注册</a></li>
+          <li><a href="#">网站备案</a></li>
+          <li><a href="#">对象存储</a></li>
+          <li><a href="#">云硬盘</a></li>
+          <li><a href="#">云数据库</a></li>
+          <li><a href="#">云数据库</a></li>
+          <li><a href="#">批量计算</a></li>
+          <li><a href="#">容器服务</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main">
+      <div class="top">
+        <h2>云从业者培训及认证</h2>
+        <p>好好学习，天天向上</p>
+      </div>
+      <div class="content">
+        <div class="left">
+          <h2>在线课程</h2>
+          <p>
+            本课程专为云计算初学者、学生、个人开发者打造，购买云+校园任意套餐可免费观看课程视频本课程专为云计算初学者、学生、个人开发者打造，购买云+校园任意套餐可免费观看课程视频本课程专为云计算初学者、学生、个人开发者打造，购买云+校园任意套餐可免费观看课程视频本课程专为云计算初学者、学生、个人开发者打造，购买云+校园任意套餐可免费观看课程视频本课程专为云计算初学者、学生、个人开发者打造，购买云+校园任意套餐可免费观看课程视频
+          </p>
+          <a href="#">开始学习</a>
+        </div>
+        <div class="right">
+          <img src="./images/right.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="left">
+        <div>
+          <ul>
+            <li><a href="#">腾讯云计算</a></li>
+            <li><a href="#">产品</a></li>
+            <li><a href="#">云市场</a></li>
+            <li><a href="#">客户案例</a></li>
+            <li><a href="#">产品发布台</a></li>
+            <li><a href="#">网站备案</a></li>
+            <li><a href="#">认证信息</a></li>
+            <li><a href="#">许可证说明</a></li>
+            <li><a href="#">隐私声明</a></li>
+            <li><a href="#">关于我们</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">解决方案</a></li>
+            <li><a href="#">视频</a></li>
+            <li><a href="#">游戏</a></li>
+            <li><a href="#">金融</a></li>
+            <li><a href="#">电商</a></li>
+            <li><a href="#">网站</a></li>
+            <li><a href="#">大数据</a></li>
+            <li><a href="#">人脸核身</a></li>
+            <li><a href="#">在线教育</a></li>
+            <li><a href="#">微信小程序</a></li>
+            <li><a href="#">微信小程序音视频</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">资源与社区</a></li>
+            <li><a href="#">免费套餐</a></li>
+            <li><a href="#">入门中心</a></li>
+            <li><a href="#">定价中心</a></li>
+            <li><a href="#">资源中心</a></li>
+            <li><a href="#">腾讯云大学</a></li>
+            <li><a href="#">云+社区</a></li>
+            <li><a href="#">专栏</a></li>
+            <li><a href="#">问答</a></li>
+            <li><a href="#">沙龙</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">合作与生态</a></li>
+            <li><a href="#">合作伙伴</a></li>
+            <li><a href="#">合作伙伴学院</a></li>
+            <li><a href="#">推广奖励</a></li>
+            <li><a href="#">云+公益</a></li>
+            <li><a href="#">云+校园</a></li>
+            <li><a href="#">云+创业</a></li>
+            <li><a href="#">Techo 开发者大会</a></li>
+            <li><a href="#">腾讯数字生态大会</a></li>
+            <li><a href="#">云启产业计划</a></li>
+            <li><a href="#">腾讯云启创新基地</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">管理与支持</a></li>
+            <li><a href="#">公告</a></li>
+            <li><a href="#">云市场</a></li>
+            <li><a href="#">客户案例</a></li>
+            <li><a href="#">续费管理</a></li>
+            <li><a href="#">网站备案</a></li>
+            <li><a href="#">认证信息</a></li>
+            <li><a href="#">安全中心</a></li>
+            <li><a href="#">举报平台</a></li>
+            <li><a href="#">联系我们</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="right">
+        <p>Copyright © 2013 - 2020</p>
+        <p>Tencent Cloud. All Rights Reserved.</p>
+        <p>腾讯云 版权所有</p>
+        <a href="#">购买咨询</a>
+      </div>
+    </div>
+  </body>
+</html>

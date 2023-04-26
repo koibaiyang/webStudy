@@ -1,0 +1,58 @@
+{
+  "id": "3974011",
+  "name": "1",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "33987170",
+      "name": "下拉",
+      "font_class": "xiala",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "34453069",
+      "name": "up-arrow",
+      "font_class": "up-arrow",
+      "unicode": "e844",
+      "unicode_decimal": 59460
+    },
+    {
+      "icon_id": "34453071",
+      "name": "up-btn",
+      "font_class": "up-btn",
+      "unicode": "e845",
+      "unicode_decimal": 59461
+    },
+    {
+      "icon_id": "34453076",
+      "name": "view",
+      "font_class": "view",
+      "unicode": "e847",
+      "unicode_decimal": 59463
+    },
+    {
+      "icon_id": "34453043",
+      "name": "selected",
+      "font_class": "selected",
+      "unicode": "e843",
+      "unicode_decimal": 59459
+    },
+    {
+      "icon_id": "34453018",
+      "name": "location-fill",
+      "font_class": "location-fill",
+      "unicode": "e83e",
+      "unicode_decimal": 59454
+    },
+    {
+      "icon_id": "34453042",
+      "name": "right-btn",
+      "font_class": "right-btn",
+      "unicode": "e842",
+      "unicode_decimal": 59458
+    }
+  ]
+}

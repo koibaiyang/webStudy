@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- 导入页面的基本样式 -->
+    <link rel="stylesheet" href="./css/search.css" />
+    <!-- 导入 jQuery -->
+    <script src="./lib/jquery.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Logo -->
+      <img src="./images/taobao_logo.png" alt="" class="logo" />
+
+      <div class="box">
+        <!-- tab 栏 -->
+        <div class="tabs">
+          <div class="tab-active">宝贝</div>
+          <div>店铺</div>
+        </div>
+        <!-- 搜索区域（搜索框和搜索按钮） -->
+        <div class="search-box">
+          <input
+            type="text"
+            class="ipt"
+            placeholder="请输入要搜索的内容"
+            id="btn"
+          /><button class="btnSearch">搜索</button>
+        </div>
+        <div class="suggestList">
+          <!-- <div class="sugitem">123</div> -->
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        // 定义搜索缓存
+        const cacheObj = {};
+        // 定义搜索框防抖函数
+        let timer = null;
+        function debounceSearch(keyword) {
+          timer = setTimeout(function () {
+            getSuggestList(keyword);
+          }, 300);
+        }
+        // 输入框键盘抬起事件
+        $("#btn").on("keyup", function () {
+          clearTimeout(timer);
+          const keyword = $(this).val().trim();
+          if (keyword.length <= 0) {
+            $(".suggestList").empty().hide();
+            return;
+          }
+          // console.log(keyword);
+          // getSuggestList(keyword);
+          if (cacheObj[keyword]) {
+            return renderList(cacheObj[keyword]);
+          }
+          debounceSearch(keyword);
+        });
+        // 获取建议列表
+        function getSuggestList(kw) {
+          $.ajax({
+            url: "https://suggest.taobao.com/sug?q=" + kw,
+            dataType: "jsonp",
+            success: function (res) {
+              // console.log(res.result);
+              const k = $("#btn").val().trim();
+              cacheObj[k] = res.result;
+              renderList(res.result);
+            },
+          });
+        }
+        // 渲染建议列表函数
+        function renderList(rs) {
+          $(".suggestList")
+            .show()
+            .empty()
+            .append(
+              rs
+                .map((item) => {
+                  return `
+            <div class="sugitem">${item[0]}</div>
+            `;
+                })
+                .join("")
+            );
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .clearfix::before,
+      .clearfix::after {
+        content: "";
+        display: table;
+      }
+      .clearfix::after {
+        clear: both;
+      }
+      div {
+        margin: 250px auto;
+        padding-top: 20px;
+        width: 250px;
+        height: 300px;
+        background-color: rgb(240, 112, 112);
+        text-align: center;
+        box-shadow: 5px 5px 8px #666;
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+      p {
+        margin: 20px 0;
+        font-size: 18px;
+      }
+      h3,
+      span {
+        font-size: 25px;
+        margin: 40px 0 30px;
+      }
+      .hms {
+        margin-bottom: 30px;
+      }
+      i {
+        font-style: normal;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box clearfix">
+      <p>今天是2023年4月6日</p>
+      <h3>睡觉倒计时</h3>
+      <p class="hms">
+        <span class="h">0</span><i>:</i><span class="m">0</span><i>:</i
+        ><span class="s">0</span>
+      </p>
+      <p>00:00:00睡觉</p>
+    </div>
+    <script>
+      const a = parseInt(Math.random() * 255);
+      const b = parseInt(Math.random() * 255);
+      const c = parseInt(Math.random() * 255);
+      const randomColor = `rgb(${a}, ${b}, ${c})`;
+      const box = document.querySelector(".box");
+      box.style.backgroundColor = randomColor;
+      function getCha() {
+        const p1 = document.querySelector(".box p:nth-child(1)");
+        const h = document.querySelector(".box .hms .h");
+        const m = document.querySelector(".box .hms .m");
+        const s = document.querySelector(".box .hms .s");
+        const date = new Date();
+        const y = date.getFullYear();
+        const month = date.getMonth() + 1;
+        const d = date.getDate();
+        p1.innerHTML = `今天是${y}年${month}月${d}日`;
+        const now = +new Date();
+        const last = +new Date(`${y}-${month}-${d + 1} 00:00:00`);
+        const cha = (last - now) / 1000;
+        let hour = parseInt((cha / 60 / 60) % 24);
+        let minute = parseInt((cha / 60) % 60);
+        let second = parseInt(cha % 60);
+        hour = hour < 10 ? "0" + hour : hour;
+        minute = minute < 10 ? "0" + minute : minute;
+        second = second < 10 ? "0" + second : second;
+        h.innerHTML = hour;
+        m.innerHTML = minute;
+        s.innerHTML = second;
+      }
+      getCha();
+      setInterval(function () {
+        getCha();
+      }, 1000);
+    </script>
+  </body>
+</html>

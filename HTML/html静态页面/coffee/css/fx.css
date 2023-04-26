@@ -1,0 +1,176 @@
+/* 把我们所有标签的内外边距清零 */
+* {
+  margin: 0;
+  padding: 0;
+  /* css3盒子模型 */
+  box-sizing: border-box;
+}
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+  font-style: normal;
+}
+/* 去掉li 的小圆点 */
+li {
+  list-style: none;
+}
+img {
+  /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+  border: 0;
+  /* 取消图片底侧有空白缝隙的问题 */
+  vertical-align: middle;
+}
+button {
+  /* 当我们鼠标经过button 按钮的时候，鼠标变成小手 */
+  cursor: pointer;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+a:hover {
+  color: #c81623;
+}
+button,
+input {
+  /* "\5B8B\4F53" 就是宋体的意思 这样浏览器兼容性比较好 */
+  font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+  /* 默认有灰色边框我们需要手动去掉 */
+  border: 0;
+  outline: none;
+}
+body {
+  /* CSS3 抗锯齿形 让文字显示的更加清晰 */
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+  color: #666;
+}
+.hide,
+.none {
+  display: none;
+}
+/* 清除浮动 */
+.clearfix:after {
+  visibility: hidden;
+  clear: both;
+  display: block;
+  content: ".";
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+.banner {
+  position: relative;
+}
+.banner .rb {
+  position: absolute;
+  display: flex;
+  right: 60px;
+  bottom: 30px;
+}
+.banner .rb .pic {
+  margin-left: 5px;
+}
+.nav {
+  margin: 5px auto;
+  width: 890px;
+  background-color: #09c;
+}
+.nav ul {
+  display: flex;
+  justify-content: center;
+}
+.nav ul a {
+  margin: 0 5px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 30px;
+  color: #fff;
+}
+.nav ul a:hover {
+  color: yellow;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+.main aside {
+  width: 300px;
+  background-color: #6cf;
+}
+.main aside table {
+  margin: 25px auto;
+  text-align: center;
+  color: #673929;
+}
+.main aside table caption {
+  font-size: 16px;
+}
+.main aside table th,
+.main aside table td {
+  font-size: 14px;
+}
+.main aside .pic {
+  margin-top: 20px;
+}
+.main aside .pic .box {
+  margin: 0 auto;
+  background-color: #eee;
+  width: 108px;
+  height: 118px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #aaa;
+  transform: rotate(10deg);
+}
+.main aside .pic .box.box:nth-child(even) {
+  transform: rotate(-10deg);
+}
+.main aside .pic .box img {
+  margin-top: 10px;
+  width: 85px;
+}
+.main .content {
+  padding: 20px 20px;
+  width: 595px;
+  background-color: #cff;
+}
+.main .content .goods {
+  display: flex;
+  margin-bottom: 5px;
+}
+.main .content .goods .pic {
+  padding: 5px;
+  border: 1px dashed #000;
+}
+.main .content .goods .txt {
+  padding: 6px;
+  font-size: 19px;
+  color: #673929;
+}
+.main .content .goods .txt h3 {
+  margin-left: 4px;
+}
+.main .content .goods .txt p {
+  font-size: 16px;
+}
+.footer {
+  margin-top: 5px;
+}
+.footer img {
+  width: 900px;
+}
+.fixed {
+  position: fixed;
+  left: 20px;
+  bottom: 500px;
+}
+.fixed img {
+  width: 100px;
+}
